@@ -4,32 +4,29 @@ const someFunc = function() {
 
 someFunc();
 
-const person = function() {
-  this.name = 'Person';
+const person = {
+  name: 'person',
+  sayHi: function() {
+    console.log(`Hi, my name is: ${this.name}`)
+  },
+  sayHiArrow: () => {
+    console.log(this);
+    console.log(`Hi, my name is ${this.name}`)
+  }
 }
 
-person.prototype.sayHi = function() {
-  console.log(`Hi, my name is ${this.name}`);
-};
+person.sayHi();
 
-person.prototype.arrowHi = () => {
-  console.log(`Hi, my name is ${this.name}`);
-}
-
-const personInstance = new person();
-
-personInstance.sayHi();
-
-personInstance.arrowHi();
+person.sayHiArrow();
 
 const mac = {
   name: 'Mac'
 }
 
-personInstance.sayHi.call(mac);
+person.sayHi.call(mac);
 
-personInstance.sayHi.apply(mac);
+person.sayHi.apply(mac);
 
-const macSayHi = personInstance.sayHi.bind(mac);
+const macSayHi = person.sayHi.bind(mac);
 
 macSayHi();
