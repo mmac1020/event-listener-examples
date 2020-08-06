@@ -12,6 +12,9 @@ const person = {
   sayHiArrow: () => {
     console.log(this);
     console.log(`Hi, my name is ${this.name}`)
+  },
+  displayNumbers: function(num1, num2) {
+    console.log(`${this.name} is displaying: ${num1} and ${num2}`);
   }
 }
 
