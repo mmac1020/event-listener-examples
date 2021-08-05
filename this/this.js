@@ -7,13 +7,13 @@ const mac = {
     console.log(`Hello, my name is ${this.name}`);
   },
 };
-const Elisa = { name: 'Elisa' };
-mac.sayHi.call(mac);
-const elisaSayHi = mac.sayHi.bind(Elisa);
-elisaSayHi();
 mac.sayHi();
-// mac.sayHi();
-// mac.sayHiArrow();
+const amaya = {
+  name: 'amaya',
+};
+mac.sayHi.call(amaya);
+const newSayHi = mac.sayHi.bind(amaya);
+newSayHi();
 
 // const buttonContainer = document.getElementById('buttonContainer');
 
