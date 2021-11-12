@@ -1,19 +1,20 @@
 const mac = {
   name: 'mac',
   sayHi() {
+    console.log('this: ', this);
     console.log(`Hello, my name is ${this.name}`);
   },
   sayHiArrow: () => {
+    console.log('this: ', this);
     console.log(`Hello, my name is ${this.name}`);
   },
 };
-const Elisa = { name: 'Elisa' };
-mac.sayHi.call(mac);
-const elisaSayHi = mac.sayHi.bind(Elisa);
-elisaSayHi();
-mac.sayHi();
 // mac.sayHi();
 // mac.sayHiArrow();
+const liz = {name: 'liz'};
+// mac.sayHi.call(liz);
+const lizSayHi = mac.sayHi.bind(liz);
+lizSayHi()
 
 // const buttonContainer = document.getElementById('buttonContainer');
 

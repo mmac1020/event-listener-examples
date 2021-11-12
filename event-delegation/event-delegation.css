@@ -20,13 +20,16 @@ button {
 }
 
 .button-container {
-  border: 4px solid red;  
+  border: 4px solid red;
 }
 
 .button-hovered {
   background-color: orange;
 }
 
+.button-click-toggle {
+  background-color: pink;
+}
 
 /* source: https://codepen.io/finnhvman/pen/jLXKJw */
 /* Ripple effect */
